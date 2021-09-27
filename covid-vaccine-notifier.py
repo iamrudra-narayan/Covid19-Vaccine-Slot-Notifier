@@ -30,9 +30,8 @@ def cowin_extract():
                     requests.get(base_url)
 if __name__ == '__main__':
    cowin_extract()
-#
+
 schedule.every(1).minutes.do(cowin_extract)
-#
 while True:
    schedule.run_pending()
    time.sleep(1)
